@@ -39,8 +39,6 @@ This project demonstrates bare-metal firmware development on STM32F411 using reg
 | RX     | PA3       |
 | Baud   | 115200    |
 
----
-
 ##  Project Structure
 adxl_oled/
 ├── main.c
@@ -53,8 +51,6 @@ adxl_oled/
 ├── linker.ld
 ├── syscalls.c
 ├── Makefile
-
-
 ## 📟Working Logic
 
 1. STM32 initializes I2C, UART, OLED
@@ -62,29 +58,23 @@ adxl_oled/
 3. Motion detected → **INT1 triggers EXTI**
 4. STM32 reads `INT_SOURCE`
 5. OLED displays:
-
 6.  DETECTED 2G
    ```
 6. LED ON + UART message
 7. Message clears after delay
-
-
-
 ##  Key Registers Used
-
 * **ADXL345**
-
   * `0x24` → THRESH_ACT
   * `0x27` → ACT_INACT_CTL
   * `0x2E` → INT_ENABLE
   * `0x30` → INT_SOURCE
-
 * **STM32**
-
   * GPIO, I2C1, USART2, EXTI, NVIC
-
  Author
-
 **Suraj Kumar**
 Embedded Systems | Firmware | Bare-Metal
 🇮🇳 India
+
+📞 Contact
+Developed by **Suraj Kumar**
+📧 suraj.y@adjengineering.in 📞 +91-6391366017
